@@ -1,0 +1,10 @@
+.setContainer{
+    width: 200px;
+    position:fixed;
+}
+input{
+    border-radius: 15px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+}
