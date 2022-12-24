@@ -1,5 +1,5 @@
 import Slide from './Slides/Slide';
-import { useState } from 'react';
+import {  useState } from 'react';
 import {v4 } from 'uuid'
 import SetQuestionAnswers from './SetTable/SetQuestionAnswers'
 import './app.css'
@@ -14,10 +14,11 @@ function App(){
   const slides=useDataSlides();
   const setSlides=useUpdateDataSlides();
 
-  /*Sluzi za selektovanje Slida*/
+  /*Sluzi za selektovanje Slida i answera*/
   const [slideKey,setSlideKey]=useState("");
-  /*Sluzi za selektovanje answera*/
   const [answerKey,setAnswerKey]=useState("");
+
+
 
   /*dodavanje slide*/
   function addSlide(){
