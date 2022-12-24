@@ -1,12 +1,23 @@
 import './setTable.css'
-import {useRef} from 'react'
+import {useEffect, useRef} from 'react';
+
+
+
+/*Folder za izmjenu slideova */
 function SetQuestionAnswers({setSlides,slides,slideKey,answerKey,addSlide}){
     const copySlides=slides;
 
     const inputQuestion=useRef("");
     const inputAnswer=useRef("");
-
-
+    /*resetovanja inputa question */
+    useEffect(()=>{
+        inputQuestion.current.value="";
+    },[slideKey])
+    /*resetovanje inputa answera */
+    useEffect(()=>{
+        inputAnswer.current.value="";
+    },[answerKey])
+    /*mjenjanje pitanja*/
     function addQuestion(){
         copySlides.forEach(slide=>{
             if(slide.key===slideKey){
@@ -16,7 +27,7 @@ function SetQuestionAnswers({setSlides,slides,slideKey,answerKey,addSlide}){
 
         return copySlides;    
     }
-
+    /*mjenjanje answera*/
     function addAnswer(){
         copySlides.forEach(slide=>{
             if(slide.key===slideKey){

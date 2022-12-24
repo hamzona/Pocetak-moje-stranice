@@ -1,7 +1,7 @@
 import { Routes,Route } from "react-router-dom";
 import App from "./App";
 import SlidesContextProvider from "./GlobalContext/DataSlides";
-import StartQuiz from "./StartQuiz";
+import StartQuiz from "./StartSlides/StartQuiz";
 
 function Main(){
     return (<SlidesContextProvider>

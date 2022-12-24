@@ -4,15 +4,17 @@ import {v4}from 'uuid'
 const DataSlides=createContext();
 const UpdateDataSlides=createContext();
 
-
+/*exportujem slides */
 export function useDataSlides(){
     return useContext(DataSlides);
 }
+/*exportujem setSlides*/
 export function useUpdateDataSlides(){
     return useContext(UpdateDataSlides);
 }
 
 export default function SlidesContextProvider({children}){
+    /*glavni state koji cu mjenjati u Slides folderu i printat u StartSlides folderu */
     const [slides,setSlides]=useState([{
         key:v4(),
         question:"question",

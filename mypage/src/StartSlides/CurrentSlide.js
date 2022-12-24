@@ -1,6 +1,7 @@
-import './Slides/slide.css'
+import '../Slides/slide.css'
 import CurrentAnswersData from './CurrentAnswersData.js'
 import { useState } from 'react';
+
 function CurrentSlide({currentSlideData,setI,i,setCurrentSlideData,slides}){
     const [TrueFalseSyle,setTrueFalseSyle]=useState({});
     return <div className="table">
@@ -14,7 +15,7 @@ function CurrentSlide({currentSlideData,setI,i,setCurrentSlideData,slides}){
     </div> 
     <button onClick={()=>{
         setI(prev=>{return ++prev})
-        setCurrentSlideData(slides[i])}}>Next</button>
+        setCurrentSlideData(slides[0])}}>Next</button>
   </div>
 }
 

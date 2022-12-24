@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { useDataSlides } from "./GlobalContext/DataSlides";
+import { useDataSlides } from "../GlobalContext/DataSlides";
 import CurrentSlide from "./CurrentSlide";
 import { useState } from "react";
+
+
 function StartQuiz(){
     const [i,setI]=useState(0);
     const slides=useDataSlides();

@@ -10,12 +10,16 @@ import {useDataSlides,useUpdateDataSlides} from './GlobalContext/DataSlides';
 
 
 function App(){
+  /*uzimam slide i setSlide iz Contexta */
   const slides=useDataSlides();
   const setSlides=useUpdateDataSlides();
+
+  /*Sluzi za selektovanje Slida*/
   const [slideKey,setSlideKey]=useState("");
+  /*Sluzi za selektovanje answera*/
   const [answerKey,setAnswerKey]=useState("");
 
-
+  /*dodavanje slide*/
   function addSlide(){
     setSlides(prev=>[...prev,{
       key:v4(),
