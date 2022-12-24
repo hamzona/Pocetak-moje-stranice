@@ -15,7 +15,7 @@ function CurrentSlide({currentSlideData,setI,i,setCurrentSlideData,slides}){
     </div> 
     <button onClick={()=>{
         setI(prev=>{return ++prev})
-        setCurrentSlideData(slides[0])}}>Next</button>
+        setCurrentSlideData(slides[i])}}>Next</button>
   </div>
 }
 

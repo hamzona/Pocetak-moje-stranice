@@ -18,7 +18,7 @@ function StartQuiz(){
         return<div>
             <h1>Finished game</h1>
             <button onClick={()=>{setI(0)
-                setCurrentSlideData(slides[i])}}>Restart</button><br></br>
+                setCurrentSlideData(slides[0])}}>Restart</button><br></br>
             <Link to="/">Make quiz</Link>
         </div>
     }

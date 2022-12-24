@@ -1,5 +1,5 @@
 import Slide from './Slides/Slide';
-import {  useState } from 'react';
+import { useEffect, useState } from 'react';
 import {v4 } from 'uuid'
 import SetQuestionAnswers from './SetTable/SetQuestionAnswers'
 import './app.css'
@@ -18,7 +18,25 @@ function App(){
   const [slideKey,setSlideKey]=useState("");
   const [answerKey,setAnswerKey]=useState("");
 
-
+  let copySlides=slides;
+  /*Funkcija koja mjenja tacnost odgovora u njegovu suprotnu vrijednost i vraca taj obj*/
+  function hendleAnswer(){
+     //answerDiv.target.classList.add('selected');
+     copySlides.forEach(slide=>{
+      if(slide.key===slideKey){
+          slide.answers.forEach(answer=>{
+              if(answer.key===answerKey){
+                  answer.correct=!answer.correct;
+              }
+          })
+      }
+  })
+  return copySlides;
+  }
+  useEffect(()=>{
+    console.log('render')
+    setSlides([...hendleAnswer()])
+  },[answerKey])
 
   /*dodavanje slide*/
   function addSlide(){
