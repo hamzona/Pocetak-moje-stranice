@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+}
+.nav-cont{
+    background-color: rgb(58, 58, 58);
+    padding: 50px;
+    width: 100vw;
+    z-index: 1;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+.nav-link{
+    width: max-content;
+    height: max-content;
+    color: white;
+    padding: 10%rem;
+}
+.nav-link:hover{
+    background-color:rgb(95, 95, 95) ;
+}
