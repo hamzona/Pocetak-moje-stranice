@@ -10,6 +10,9 @@
     box-sizing:border-box;
     border-radius: 5px;  
 }
+.top-cont{
+    padding: 40px;
+}
 .number{
     position: absolute;
     left: 10px;
@@ -29,14 +32,4 @@
     align-items: center;
     border-radius: 15px;
     margin: 10px;
-}
-
-.selected{
-    background-color: gray;
-}
-.green{
-    background-color: green;
-}
-.red{
-    background-color: red;
 }

@@ -2,7 +2,9 @@
 display: flex;
 }
 
-
+.set-cont{
+    margin:20px;
+}
 
 .slide-cont{
     width: 90%;

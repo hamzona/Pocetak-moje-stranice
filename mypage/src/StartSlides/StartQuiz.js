@@ -9,10 +9,15 @@ function StartQuiz(){
     const slides=useDataSlides();
     const [currentSlideData,setCurrentSlideData]=useState(slides[i]);
     if(currentSlideData!==undefined){
-        return(<div className="quiz-run-cont">
+        return(
+            <>
+       
+            <div className="quiz-run-cont">
             <Link className="link" to="/">Make quiz</Link>
-            <CurrentSlide slides={slides} i={i} setI={setI} key={currentSlideData.key} setCurrentSlideData={setCurrentSlideData} currentSlideData={currentSlideData}/>
-         </div>
+            <CurrentSlide className="slide-cont" slides={slides} i={i} setI={setI} key={currentSlideData.key} setCurrentSlideData={setCurrentSlideData} currentSlideData={currentSlideData}/>
+            </div>
+            </>
+
          )
     }else{
         return<div>

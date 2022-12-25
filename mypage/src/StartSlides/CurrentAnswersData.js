@@ -1,4 +1,4 @@
-
+import './presentSlide.css'
 function CurrentAnswersData({answer,clicked,setClicked}){
     const TrueFalseSyle={
         backgroundColor:answer.correct?'green':'red'
@@ -11,7 +11,7 @@ function CurrentAnswersData({answer,clicked,setClicked}){
             console.log('netacno')
         }
     }
-    return <div onClick={hendleAnswer} style={clicked?TrueFalseSyle:{}} className="answer" >
+    return <div onClick={hendleAnswer} style={clicked?TrueFalseSyle:{}} className="pres-answer" >
         {answer.content}
     </div>
 }

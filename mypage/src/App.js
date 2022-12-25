@@ -54,7 +54,7 @@ function App(){
     }
 
   return<div className='container'>
-    <SetQuestionAnswers addSlide={addSlide} answerKey={answerKey} setSlides={setSlides} slideKey={slideKey} setSlideKey={setSlideKey} slides={slides}/>
+    <SetQuestionAnswers className="set-cont" addSlide={addSlide} answerKey={answerKey} setSlides={setSlides} slideKey={slideKey} setSlideKey={setSlideKey} slides={slides}/>
     <div className='slide-cont'>
          {slides.map((slide,i)=>{
            return <Slide setIsChange={setIsChange} slides={slides} answerKey={answerKey} setSlides={setSlides} slideKey={slideKey} setAnswerKey={setAnswerKey} setSlideKey={setSlideKey} slide={slide} number={i+1} key={slide.key}/>

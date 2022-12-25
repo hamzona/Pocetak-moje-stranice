@@ -3,7 +3,7 @@ function Answers({setIsChange,answerKey,answer,slides,setSlides,slideKey,setAnsw
 
     /*stil*/
     const TrueFalseSyle={
-        backgroundColor:answer.correct?'green':'red'
+        backgroundColor:answer.correct?'rgb(20, 148, 20)':'rgb(187, 20, 20)'
     }
     
 
