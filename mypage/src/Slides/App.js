@@ -1,10 +1,10 @@
-import Slide from './Slides/Slide';
+import Slide from './Slide';
 import { useEffect, useState } from 'react';
 import {v4 } from 'uuid'
-import SetQuestionAnswers from './SetTable/SetQuestionAnswers'
-import './app.css'
+import SetQuestionAnswers from '../SetTable/SetQuestionAnswers'
+import '../app.css'
 import { Link } from 'react-router-dom';
-import {useDataSlides,useUpdateDataSlides} from './GlobalContext/DataSlides';
+import {useDataSlides,useUpdateDataSlides} from '../GlobalContext/DataSlides';
 
 
 

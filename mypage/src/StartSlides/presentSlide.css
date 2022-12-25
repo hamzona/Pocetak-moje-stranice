@@ -1,4 +1,16 @@
-
+.finish-cont{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.finish-tabel{
+    padding: 40px;
+    border: 3px solid;
+}
+.result{
+    font-size: 50px;
+}
 .link{
     padding: 5px;
     border: 3px solid;
@@ -78,4 +90,10 @@
 
 .question{
     font-size: 30px;
+}
+
+.footer-cont{
+    height: 100px;
+    width: fit-content;
+    background-color: aquamarine;
 }

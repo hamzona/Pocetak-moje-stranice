@@ -1,11 +1,17 @@
 import CurrentAnswersData from './CurrentAnswersData.js'
 import { useState } from 'react';
 import './presentSlide.css'
-function CurrentSlide({currentSlideData,setI,i,setCurrentSlideData,slides}){
+function CurrentSlide({setCorrect,currentSlideData,setI,i,setCurrentSlideData,slides}){
 
     /*pokazivanje odgovora*/
     const [clicked,setClicked]=useState(false);
+    
 
+    const[correctCheck,setCorrectChek]=useState(true);
+
+    const hideButton={
+        display:clicked?'block':'none'
+    }
     return (
     <div className="pres-table">
         <div className='top-cont'>
@@ -15,14 +21,17 @@ function CurrentSlide({currentSlideData,setI,i,setCurrentSlideData,slides}){
 
         <div className='pres-answers'>
             {currentSlideData.answers.map(answer=>{
-                return<CurrentAnswersData clicked={clicked} setClicked={setClicked} key={answer.key} answer={answer}/>
+                return<CurrentAnswersData setCorrectChek={setCorrectChek} setCorrect={setCorrect} clicked={clicked} setClicked={setClicked} key={answer.key} answer={answer}/>
             })}
         </div> 
-        <button className='pres-next' onClick={()=>{
-            setClicked(false)
-            setI(prev=>{return ++prev})
-            setCurrentSlideData(slides[i])}}
-            >NEXT</button>
+        <div className='footer-cont'>
+                <div style={hideButton}>
+                <p>{correctCheck?'CORRECT':'WRONG'}</p>
+                <button className='pres-next' onClick={()=>{
+                    setClicked(false)
+                    setI(prev=>{return ++prev})}}>NEXT</button>
+            </div>
+        </div>
   </div>
   )
 }

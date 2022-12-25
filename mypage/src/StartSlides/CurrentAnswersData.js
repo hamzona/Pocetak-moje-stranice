@@ -1,14 +1,17 @@
 import './presentSlide.css'
-function CurrentAnswersData({answer,clicked,setClicked}){
+function CurrentAnswersData({setCorrectChek,setCorrect,answer,clicked,setClicked}){
     const TrueFalseSyle={
         backgroundColor:answer.correct?'green':'red'
     }
     function hendleAnswer(){
       setClicked(true);
         if(answer.correct){
-            console.log('tacno')
+            setCorrect(correct=>{
+                return ++correct;
+            })
+            setCorrectChek(answer.correct);
         }else{
-            console.log('netacno')
+            setCorrectChek(answer.correct);
         }
     }
     return <div onClick={hendleAnswer} style={clicked?TrueFalseSyle:{}} className="pres-answer" >
