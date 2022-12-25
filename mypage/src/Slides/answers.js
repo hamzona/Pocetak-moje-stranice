@@ -1,5 +1,4 @@
 import './slide.css'
-import { useEffect } from 'react';
 function Answers({answerKey,answer,slides,setSlides,slideKey,setAnswerKey}){
 
     /*stil*/
