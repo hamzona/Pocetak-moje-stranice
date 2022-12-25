@@ -17,7 +17,8 @@ function App(){
   /*Sluzi za selektovanje Slida i answera*/
   const [slideKey,setSlideKey]=useState("");
   const [answerKey,setAnswerKey]=useState("");
-
+  /*klikanje odgovora*/
+  const [isChange,setIsChange]=useState(false);
   let copySlides=slides;
   /*Funkcija koja mjenja tacnost odgovora u njegovu suprotnu vrijednost i vraca taj obj*/
   function hendleAnswer(){
@@ -36,7 +37,7 @@ function App(){
   useEffect(()=>{
     console.log('render')
     setSlides([...hendleAnswer()])
-  },[answerKey])
+  },[isChange]);
 
   /*dodavanje slide*/
   function addSlide(){
@@ -54,13 +55,13 @@ function App(){
 
   return<div className='container'>
     <SetQuestionAnswers addSlide={addSlide} answerKey={answerKey} setSlides={setSlides} slideKey={slideKey} setSlideKey={setSlideKey} slides={slides}/>
-    <div>
+    <div className='slide-cont'>
          {slides.map((slide,i)=>{
-           return <Slide slides={slides} answerKey={answerKey} setSlides={setSlides} slideKey={slideKey} setAnswerKey={setAnswerKey} setSlideKey={setSlideKey} slide={slide} number={i+1} key={slide.key}/>
+           return <Slide setIsChange={setIsChange} slides={slides} answerKey={answerKey} setSlides={setSlides} slideKey={slideKey} setAnswerKey={setAnswerKey} setSlideKey={setSlideKey} slide={slide} number={i+1} key={slide.key}/>
          })}
     </div>
-    <div className='start'>
-      <Link to="/start">Start</Link>
+    <div className='start-cont'>
+      <Link className='link' to="/start">Start</Link>
     </div>
   </div>
 }

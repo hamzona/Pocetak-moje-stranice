@@ -1,4 +1,4 @@
-import '../Slides/slide.css'
+
 import CurrentAnswersData from './CurrentAnswersData.js'
 import { useState } from 'react';
 

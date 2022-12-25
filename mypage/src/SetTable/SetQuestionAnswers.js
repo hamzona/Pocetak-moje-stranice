@@ -40,7 +40,7 @@ function SetQuestionAnswers({setSlides,slides,setSlideKey,slideKey,answerKey,add
         })
         return copySlides;
     }
-    
+
     /*Brisanje slidova*/
     useEffect(()=>{
         setSlideKey(copySlides[copySlides.length-1].key);
@@ -54,10 +54,15 @@ function SetQuestionAnswers({setSlides,slides,setSlideKey,slideKey,answerKey,add
     }
 
     return <div className="setContainer">
+        <div className='input-cont'>
         <input ref={inputQuestion} type="text" placeholder="qustion" onInput={()=>setSlides([...addQuestion()])}/>
         <input ref={inputAnswer} type="text" placeholder="answer" onInput={()=>setSlides([...addAnswer()])}/>
-        <button onClick={addSlide}>add slide</button>
-        <button onClick={deleteSlide}>Delete slide</button>
+        </div>
+
+        <div className='add-del-cont'>
+        <button className='addSlide' onClick={addSlide}>ADD</button>
+        <button className='deleteSlide' onClick={deleteSlide}>DELETE</button>
+        </div>
     </div>
 }
 export default SetQuestionAnswers;

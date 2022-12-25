@@ -1,5 +1,5 @@
 import './slide.css'
-function Answers({answerKey,answer,slides,setSlides,slideKey,setAnswerKey}){
+function Answers({setIsChange,answerKey,answer,slides,setSlides,slideKey,setAnswerKey}){
 
     /*stil*/
     const TrueFalseSyle={
@@ -9,6 +9,7 @@ function Answers({answerKey,answer,slides,setSlides,slideKey,setAnswerKey}){
 
     return <div onClick={()=>{
         /*mjenja se selektovani answer i na osnovu njega i setupa se slides u izmjenjeni obj*/
+        setIsChange(prev=>!prev);
         setAnswerKey(answer.key);}} style={TrueFalseSyle} className="answer">
         {answer.content}
     </div>
